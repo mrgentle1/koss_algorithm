@@ -12,7 +12,7 @@ void solution(){
 		
 	sort(v.begin(), v.end());
 	long long low = 0, high = m*v.back();
-	long long ans = m * v.back();
+	long long ans;
 	
 	while(low <= high){
 		long long mid = (low+high)/2;
@@ -22,7 +22,7 @@ void solution(){
 			sum += mid / i;
 		
 		if(sum >= m){
-			ans = min(ans, mid);
+			ans = mid;
 			high = mid-1;
 		}
 		else
