@@ -36,5 +36,8 @@ while True:
         if buffer_size > buffer.size():
             buffer.push(n)
 
-while not buffer.empty():
-    print(buffer.pop())
+if not buffer.empty():
+    while not buffer.empty():
+        print(buffer.pop(), end=' ')
+else:
+    print('empty')
